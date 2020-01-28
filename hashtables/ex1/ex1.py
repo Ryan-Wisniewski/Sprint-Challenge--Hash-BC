@@ -8,16 +8,20 @@ from hashtables import (HashTable,
 
 def get_indices_of_item_weights(weights, length, limit):
     ht = HashTable(16)
-
-    """
-    YOUR CODE HERE
-    """
-
-    return None
-
+    for i in range(len(weights)):
+        print(weights[i], i)
+        key = i
+        value = weights[i]
+    for j in range(len(weights)):
+        hash_table_insert(ht, key, value)
+        print(ht)
+        retrieve = hash_table_retrieve(ht, i)
+        print('yeet',retrieve)
 
 def print_answer(answer):
     if answer is not None:
         print(str(answer[0] + " " + answer[1]))
     else:
         print("None")
+
+print(get_indices_of_item_weights([4, 6, 10, 15, 16], 5, 21))

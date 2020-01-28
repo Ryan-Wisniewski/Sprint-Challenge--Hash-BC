@@ -63,7 +63,7 @@ def hash_table_remove(hash_table, key):
 
     current_pair = hash_table.storage[index]
     last_pair = None
-
+    print('used')
     while current_pair is not None and current_pair.key != key:
         last_pair = current_pair
         current_pair = last_pair.next
